@@ -29,13 +29,13 @@ resource "kubernetes_config_map_v1_data" "cfg_coredns" {
     loadbalance
 }
 import custom/*.server
-ohkillsh.win:53 {
-    errors
-    cache 30
-    forward . 10.15.0.4 10.15.0.5 {
-      policy random
-      health_check 5s 
-    }
+#ohkillsh.win:53 {
+#    errors
+#    cache 30
+#    forward . 10.15.0.4 10.15.0.5 {
+#      policy random
+#      health_check 5s 
+#    }
 }
 EOF    
   }
