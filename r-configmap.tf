@@ -36,7 +36,7 @@ import custom/*.server
 #      policy random
 #      health_check 5s 
 #    }
-}
+#}
 EOF    
   }
 
