@@ -27,6 +27,7 @@ resource "kubernetes_config_map_v1_data" "cfg_coredns" {
     loop
     reload
     loadbalance
+    import custom/*.override
 }
 import custom/*.server
 #ohkillsh.win:53 {
