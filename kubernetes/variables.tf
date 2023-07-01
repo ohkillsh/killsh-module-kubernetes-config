@@ -5,10 +5,6 @@ variable "cluster_name" {
   type = string
 }
 
-variable "kubeconfig" {
-  type = string
-}
-
 variable "list_namespace" {
   type    = list(string)
   default = ["dev", "uat", "prd"]

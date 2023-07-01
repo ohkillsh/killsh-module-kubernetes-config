@@ -5,7 +5,6 @@ resource "kubernetes_namespace" "main" {
   }
 }
 
-
 resource "kubernetes_secret_v1" "secret_acr" {
   for_each = toset(var.list_namespace)
 
@@ -31,13 +30,4 @@ resource "kubernetes_secret_v1" "secret_acr" {
 
   depends_on = [kubernetes_namespace.main]
 }
-
-
-resource "local_file" "kubeconfig" {
-  content  = var.kubeconfig
-  filename = "${path.root}/kubeconfig"
-}
-
-
-
 
