@@ -17,5 +17,7 @@ resource "kubectl_manifest" "argocd" {
   for_each  = data.kubectl_file_documents.argocd.manifests
   yaml_body          = each.value
 
+  override_namespace = "argocd"
+
   depends_on = [ kubectl_manifest.namespace ]
 }
