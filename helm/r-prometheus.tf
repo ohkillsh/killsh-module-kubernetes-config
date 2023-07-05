@@ -5,9 +5,9 @@ resource "helm_release" "prometheus_operator" {
   namespace        = "monitoring"
   force_update     = true
   create_namespace = true
-  
-  wait             = false
-  wait_for_jobs    = false
+
+  wait          = false
+  wait_for_jobs = false
 
   values = [
     <<-EOL
