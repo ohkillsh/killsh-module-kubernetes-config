@@ -4,9 +4,9 @@ resource "helm_release" "external_secrets_operator" {
   chart            = "external-secrets"
   namespace        = "external-secrets"
   create_namespace = true
-  skip_crds        = true
-  wait             = false
-  wait_for_jobs    = false
+
+  wait          = false
+  wait_for_jobs = false
 
   set {
     name  = "installCRDs"
